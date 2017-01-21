@@ -2,7 +2,7 @@ package ch02;
 
 import becker.robots.*;
 
-public class LampTester {
+public class StreetLightTester {
 	public static void main(String[] args) {
 		// Construct the initial situation.
 		City paris = new City();
@@ -15,10 +15,10 @@ public class LampTester {
 		// put a flasherlight on the first intersection
 		Flasher flash1 = new Flasher(paris, 0, 0, true);
 		// define four streetlights
-		LampIcon sL1 = new LampIcon(paris, 4, 1);
-		LampIcon sL2 = new LampIcon(paris, 4, 2);
-		LampIcon sL3 = new LampIcon(paris, 4, 3);
-		LampIcon sL4 = new LampIcon(paris, 4, 4);
+		Streetlight sL1 = new Streetlight(paris, 4, 1, Direction.SOUTHWEST);
+		Streetlight sL2 = new Streetlight(paris, 4, 2, Direction.NORTHWEST);
+		Streetlight sL3 = new Streetlight(paris, 4, 3, Direction.SOUTHWEST);
+		Streetlight sL4 = new Streetlight(paris, 4, 4, Direction.NORTHWEST);
 
 		// turn the flasher on
 		flash1.turnOn();
@@ -39,11 +39,7 @@ public class LampTester {
 		lampMover.putThing();
 		lampMover.move();
 
-		sL1.turnOn();
-		sL2.turnOn();
-		sL3.turnOn();
-		sL4.turnOn();
 		// Use the subclass robot to switch four streetlights on and off
-//		lampSwitcher.switchLights();
+		lampSwitcher.switchLights();
 	}
 }
