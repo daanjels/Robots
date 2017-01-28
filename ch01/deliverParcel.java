@@ -5,7 +5,7 @@ public class deliverParcel {
 
 	public static void main(String[] args) {
 		//	set up initial situation
-		City	prague	= new City(3, 5, 7, 9, 60);
+		City	prague	= new City(1, 1, 7, 9, 60);
 		Thing	parcel	= new Thing(prague, 1,2);
 		Robot	karel	= new Robot(prague, 1,0, Direction.EAST);
 		

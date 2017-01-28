@@ -7,7 +7,7 @@ import becker.robots.*;
  *
  */
 public class Harvester extends RobotSE {
-	/** Construct a Hervester Robot
+	/** Construct a Harvester Robot
 	 * 
 	 */
 	public Harvester(City aCity, int str, int ave, Direction dir) {
