@@ -3,7 +3,7 @@ import becker.robots.*;
 
 public class PlantingTask {
 	public static void main(String[] args) {
-		City garden = new City("/Users/arq/Documents/XcodeProjects/Eclipse/Robots-workspace/Robots/Garden.txt");
+		City garden = new City("Garden.txt");
 //		Planter mark = new Planter(garden, 0, 0, Direction.EAST, 10);
 //		mark.plantStuff();
 		

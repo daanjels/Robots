@@ -26,6 +26,7 @@ public class RectanglePlanter extends RobotSE {
 	public void plantRect(int width, int height) {
 		this.plantSide(width);
 		this.plantSide(height);
+		this.Experiment(4);
 		this.plantSide(width);
 		this.plantSide(height);
 	}
@@ -53,5 +54,12 @@ public class RectanglePlanter extends RobotSE {
 	/** Plant one intersection. */
 	protected void plantIntersection() {
 		this.putThing();
+	}
+	
+	protected void Experiment(int single) {
+		while (single > 0) {
+			this.turnAround();
+			single = single - 1;
+		}
 	}
 }

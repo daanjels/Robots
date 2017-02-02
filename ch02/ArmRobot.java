@@ -14,7 +14,7 @@ public class ArmRobot extends Robot
 		@param aDirection The robot's initial direction. */
 	public ArmRobot(City aCity, int aStreet, int anAvenue, Direction aDirection)
 	{	super(aCity, aStreet, anAvenue, aDirection);
-      this.setIcon(new ArmRobotIcon());
+		this.setIcon(new ArmRobotIcon());
 	}
 }
  
