@@ -13,4 +13,43 @@ public class ShovelBot extends RobotSE {
 			int anAvenue, Direction aDir, int numThings) {
 		super(aCity, aStreet, anAvenue, aDir, numThings);
 	}
+	
+	public void findDriveway() {
+		this.turnLeft();
+		while (!this.frontIsClear()) {
+			this.turnRight();
+			this.move();
+			this.turnLeft();
+		}
+	}
+	public void clearDriveway() {
+		while (this.frontIsClear()) {
+			this.move();
+			if (this.canPickThing()) {
+				this.pickThing();
+			}
+		}
+		this.turnRight();
+		if (this.frontIsClear()) {
+			this.move();
+		}
+		this.turnRight();
+		while (this.frontIsClear()) {
+			if (this.canPickThing()) {
+				this.pickThing();
+			}
+			this.move();
+		}
+		this.putAllThings();
+		this.turnLeft();
+	}
+	public void clearSidewalk() {
+		while (this.frontIsClear()) {
+			if (this.canPickThing()) {
+				this.pickAllThings();
+			}
+			this.move();
+		}
+		this.putAllThings();
+	}
 }
