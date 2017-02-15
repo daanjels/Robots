@@ -9,13 +9,13 @@ import becker.robots.*;
 public class Histogrammer {
 	public static void main(String[] args) {
 		City chart = new City("Chart.txt");
-		HistogramBot karel = new HistogramBot(chart, 9, 0, Direction.EAST, 0);
+		HistogramBot karel = new HistogramBot(chart, 9, 5, Direction.EAST, 0);
 		
-		while (karel.getAvenue() < 9) {
+		do {
 			karel.findPile();
 			karel.distributeThings();
 			karel.move();
-		}
+		} while (karel.getAvenue() < 9);
 		// this while loop doesn't seem to work, I wonder why...
 	}
 }
