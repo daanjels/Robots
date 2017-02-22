@@ -21,23 +21,25 @@ public class ArtComponent extends JComponent {
 		super.paintComponent(g);
 		// Standard stuff to scale teh image.
 		Graphics2D g2 = (Graphics2D) g;
-		g2.scale(this.getWidth()/11, this.getHeight()/11);
+		g2.scale(this.getWidth()/100, this.getHeight()/100);
 		g2.setStroke(new BasicStroke(1.0F/this.getWidth()));
 		g2.setColor(Color.ORANGE);
-		g2.fillRect(0, 0, 11, 11);
+		g2.fillRect(-5, -5, 100, 100);
 
 		// draw our 'art'
-		for (int left = 1; left <= 10; left += 1) {
-			if (left % 2 == 0) {
-				g2.setColor(Color.YELLOW);
-			} else {
-				g2.setColor(Color.BLUE);
-			}
-			
-			for (int right = 1; right <= 10; right += 1) {
-				g2.drawLine(1, left, 10, right);
-			}
-		}
+		g2.setColor(Color.BLUE);
+		g2.drawOval(5, 5, 1, 1);
+//		for (int left = 1; left <= 10; left += 1) {
+//			if (left % 2 == 0) {
+//				g2.setColor(Color.YELLOW);
+//			} else {
+//				g2.setColor(Color.BLUE);
+//			}
+//			
+//			for (int right = 1; right <= 10; right += 1) {
+//				g2.drawLine(1, left, 10, right);
+//			}
+//		}
 
 //		for (int left = 1; left <= 10; left += 1) {
 //			for (int right = 1; right <= 10; right += 1) {
