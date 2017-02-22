@@ -11,16 +11,22 @@ public class MyBot {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		City chart = new City("Chart.txt");
+//		City chart = new City("Chart.txt");
 //		HomingBot karel = new HomingBot(chart, 9, 9, Direction.WEST, 0);
 //		karel.faceNorth();
 //		karel.goHome();
-		ProspectorBot prosper = new ProspectorBot(chart, 5, 5, Direction.EAST, 0);
+
+//		ProspectorBot prosper = new ProspectorBot(chart, 5, 5, Direction.EAST, 0);
+//		
+//		while (prosper.canPickThing()) {
+//			prosper.followTrail();
+//			prosper.move();
+//		}
+
+		City room = new City("Room1.txt");
+		CleanBot proper = new CleanBot(room, 0, 0, Direction.EAST, 0);
 		
-		while (prosper.canPickThing()) {
-			prosper.followTrail();
-			prosper.move();
-		}
+		proper.cleanRoom();
 	}
 
 }
