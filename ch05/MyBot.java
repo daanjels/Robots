@@ -23,10 +23,15 @@ public class MyBot {
 //			prosper.move();
 //		}
 
-		City room = new City("Room1.txt");
-		CleanBot proper = new CleanBot(room, 0, 0, Direction.EAST, 0);
+//		City room = new City("Room1.txt");
+//		CleanBot proper = new CleanBot(room, 0, 0, Direction.EAST, 0);
+//		
+//		proper.cleanRoom();
+
+		City room = new City("Escape Room.txt");
+		EscapeBot houdini = new EscapeBot(room, 2, 2, Direction.SOUTH, 0);
 		
-		proper.cleanRoom();
-	}
+		houdini.escape();
+}
 
 }
