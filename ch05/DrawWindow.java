@@ -7,8 +7,8 @@ public class DrawWindow extends JComponent {
 	public static void main(String[] args) {
 		JFrame venster = new JFrame();
 		JPanel inhoud = new JPanel();
-//		ArtComponent kunst = new ArtComponent();
-		ArtContent kunst = new ArtContent();
+		ArtComponent kunst = new ArtComponent();
+//		ArtContent kunst = new ArtContent();
 		
 		inhoud.add(kunst);
 		

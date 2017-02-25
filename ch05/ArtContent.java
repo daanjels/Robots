@@ -18,7 +18,7 @@ public class ArtContent extends JComponent {
 	/**	Paint the component with our 'art' */
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
-		// Standard stuff to scale teh image.
+		// Standard stuff to scale the image.
 		Graphics2D g2 = (Graphics2D) g;
 		g2.scale(this.getWidth()/200, this.getHeight()/200);
 		g2.setStroke(new BasicStroke(1.0F/this.getWidth()));
