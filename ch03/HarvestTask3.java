@@ -4,7 +4,7 @@ import becker.robots.*;
 
 public class HarvestTask3 {
 	public static void main(String[] args) {
-		City havana = new City("/Users/arq/Documents/XcodeProjects/Eclipse/Robots-workspace/Robots/Field.txt");
+		City havana = new City("Field.txt");
 		Harvester mark = new Harvester(havana, 1, 0, Direction.EAST);
 		Harvester lucy = new Harvester(havana, 3, 0, Direction.EAST);
 		Harvester greg = new Harvester(havana, 5, 0, Direction.EAST);
