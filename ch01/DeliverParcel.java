@@ -1,7 +1,7 @@
 package ch01;
 import becker.robots.*;
 
-public class deliverParcel {
+public class DeliverParcel {
 
 	public static void main(String[] args) {
 		//	set up initial situation
