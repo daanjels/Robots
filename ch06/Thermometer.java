@@ -48,14 +48,16 @@ public class Thermometer extends JComponent
    }
 
    /** Set the thermometer's temperature.
-    *  @newTemp The new temperature. */
+    *  @newTemp The new temperature. 
+    *  this is a typical setter method */
    public void setTemperature(int newTemp)
    {  this.temp = newTemp;
       this.repaint();
    }
 
    /** Get the thermometer's current temperature.
-    *  @returns The thermometer's current temperature. */
+    *  @returns The thermometer's current temperature. 
+    *  this is a typical getter method */
    public int getTemperature()
    {  return this.temp;
    }
