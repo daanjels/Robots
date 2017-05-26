@@ -18,6 +18,7 @@ public class Main
 		{
 			karel.move();
 			karel.move();
+			karel.move();
 			karel.turnLeft();
 		}
 		
