@@ -1,0 +1,8 @@
+# City saved on 2016/1/26@23:53:53
+
+# Window title
+Robots: A Bowling alley
+# first street, first avenue, num streets, num avenues
+0 0 5 6
+# intersection size
+48

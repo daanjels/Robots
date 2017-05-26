@@ -6,7 +6,7 @@ public class CityFromFile {
 
 	public static void main(String[] args) {
 		//	set up initial situation
-		City	prague	= new City("prague.txt");
+		City	prague	= new City("lib/prague.txt");
 		Robot	karel	= new Robot(prague, 1,0, Direction.EAST);
 		
 		//	direct the robot to the final situation

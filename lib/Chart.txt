@@ -1,0 +1,51 @@
+# City saved on 2016/1/26@23:53:53
+
+# Window title
+Robots: Een kaart met stapeltjes die gedistibueerd moeten worden
+# first row, first column, num rows, num columns
+0 0 10 10
+# intersection size
+40
+
+   becker.robots.Thing 9 1
+   becker.robots.Thing 9 1
+   becker.robots.Thing 9 1
+   becker.robots.Thing 9 1
+   becker.robots.Thing 9 2
+   becker.robots.Thing 9 2
+   becker.robots.Thing 9 2
+   becker.robots.Thing 9 2
+   becker.robots.Thing 9 2
+   becker.robots.Thing 9 2
+   becker.robots.Thing 9 2
+   becker.robots.Thing 9 2
+   becker.robots.Thing 9 3
+   becker.robots.Thing 9 3
+   becker.robots.Thing 9 3
+   becker.robots.Thing 9 4
+   becker.robots.Thing 9 5
+   becker.robots.Thing 9 5
+   becker.robots.Thing 9 5
+   becker.robots.Thing 9 5
+   becker.robots.Thing 9 5
+   becker.robots.Thing 9 7
+   becker.robots.Thing 9 7
+   becker.robots.Thing 5 5
+   becker.robots.Thing 5 5
+   becker.robots.Thing 6 5
+   becker.robots.Thing 6 6
+   becker.robots.Thing 6 7
+   becker.robots.Thing 6 7
+   becker.robots.Thing 7 7
+   becker.robots.Thing 7 7
+   becker.robots.Thing 7 7
+   becker.robots.Thing 7 6
+   becker.robots.Thing 7 6
+   becker.robots.Thing 7 6
+   becker.robots.Thing 7 5
+   becker.robots.Thing 7 5
+   becker.robots.Thing 7 5
+   becker.robots.Thing 7 4
+   becker.robots.Thing 7 4
+   becker.robots.Thing 7 4
+   becker.robots.Thing 7 4

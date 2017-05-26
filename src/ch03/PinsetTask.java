@@ -3,7 +3,7 @@ import becker.robots.*;
 
 public class PinsetTask {
 	public static void main(String[] args) {
-		City stLouis = new City("Alley.txt");
+		City stLouis = new City("lib/Alley.txt");
 		Pinsetter mark = new Pinsetter(stLouis, 3, 0, Direction.EAST, 10);
 		mark.setPins();
 	}

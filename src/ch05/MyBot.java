@@ -28,7 +28,7 @@ public class MyBot {
 //		
 //		proper.cleanRoom();
 
-		City room = new City("Escape Room.txt");
+		City room = new City("lib/Escape Room.txt");
 		EscapeBot houdini = new EscapeBot(room, 2, 2, Direction.SOUTH, 0);
 		
 		houdini.escape();

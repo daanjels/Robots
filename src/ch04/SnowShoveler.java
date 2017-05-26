@@ -9,7 +9,7 @@ import becker.robots.*;
 
 public class SnowShoveler {
 	public static void main(String[] args) {
-		City snowstreet = new City("SnowStreet.txt");
+		City snowstreet = new City("lib/SnowStreet.txt");
 		ShovelBot karel = new ShovelBot(snowstreet, 0, 2, Direction.SOUTH, 0);
 		ShovelBot tina = new ShovelBot(snowstreet, 0, 2, Direction.SOUTH, 0);
 		while (karel.frontIsClear()) {

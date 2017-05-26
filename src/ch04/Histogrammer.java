@@ -8,7 +8,7 @@ import becker.robots.*;
 
 public class Histogrammer {
 	public static void main(String[] args) {
-		City chart = new City("Chart.txt");
+		City chart = new City("lib/Chart.txt");
 		HistogramBot karel = new HistogramBot(chart, 9, 5, Direction.EAST, 0);
 		
 		do {
