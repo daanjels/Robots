@@ -15,19 +15,23 @@ public class SimpleBot extends Paintable
 	private int avenue;
 	private int direction;
 	private float speed;
+	private Color colour;
+	private int size;
 	
 	/** Construct a new Robot in a given city at the given location. 
 	 * @param aCity			The city in chich the robot appears.
 	 * @param aStreet		The robot's initial street.
 	 * @param anAvenue		The robot's initial avenue.
 	 * @param aDirection	The robot's initial direction. */
-	public SimpleBot(SimpleCity aCity, int aStreet, int anAvenue, int aDirection, float aSpeed)
+	public SimpleBot(SimpleCity aCity, int aStreet, int anAvenue, int aDirection, float aSpeed, Color aColour, int aSize)
 	{
 		super();
 		this.street = aStreet;
 		this.avenue = anAvenue;
 		this.direction = aDirection;
 		this.speed = aSpeed;
+		this.colour = aColour;
+		this.size = aSize;
 		aCity.add(this, 2);	// add this robot to the given city in the top level.
 	}
 	
@@ -42,18 +46,19 @@ public class SimpleBot extends Paintable
 //	}
 	public void paint(Graphics2D g)
 	{
-		g.setColor(Color.BLACK);
+//		g.setColor(Color.BLACK);
+		g.setColor(this.colour);
 		
 		// Draw the robot's body
-		g.fillOval(this.avenue * 50 + 50/2 - 15,
-				this.street * 50 + 50/2 - 15,
-				2*15, 2*15);
+		g.fillOval(this.avenue * 50 + 50/2 - this.size/2,
+				this.street * 50 + 50/2 - this.size/2,
+				this.size, this.size);
 		
 		// Draw the robot's sensor
 		g.fillOval(
-				this.avenue * 50 + 50/2 + this.aveOffset() * 15 - 5,
-				this.street * 50 + 50/2 + this.strOffset() * 15 - 5,
-				2*5, 2*5);
+				this.avenue * 50 + 50/2 + this.aveOffset() * this.size/2 - this.size/6,
+				this.street * 50 + 50/2 + this.strOffset() * this.size/2 - this.size/6,
+				this.size/3, this.size/3);
 	}
 	
 	/** Move the robot 1 intersection. */
@@ -111,6 +116,16 @@ public class SimpleBot extends Paintable
 	public void speed(float aSpeed)
 	{
 		this.speed = aSpeed;
+	}
+	
+	public void setcolour(Color aColour)
+	{
+		this.colour = aColour;
+	}
+	
+	public void setSize(int aSize)
+	{
+		this.size = aSize;
 	}
 	
 //	Getters

@@ -14,5 +14,4 @@ public class Constants
 	public static final int LAST_DIR = NORTH;
 	
 	public static final int INTERSECTION_SIZE = 50;
-	public static double SPEED = 400;
 }

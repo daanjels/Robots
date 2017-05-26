@@ -1,5 +1,6 @@
 package ch06;
 
+import java.awt.Color;
 
 /** A main method to test the SimpleBot and related classes.
  *
@@ -8,8 +9,8 @@ public class Main
 {
 	public static void main(String[] args)
 	{	SimpleCity newYork = new SimpleCity();
-		SimpleBot karel = new SimpleBot(newYork, 4, 2, Constants.EAST, 400);
-		SimpleBot sue = new SimpleBot(newYork, 4, 2, Constants.NORTH, 400);
+		SimpleBot karel = new SimpleBot(newYork, 4, 2, Constants.EAST, 400, Color.BLUE, 30);
+		SimpleBot sue = new SimpleBot(newYork, 4, 2, Constants.NORTH, 400, Color.RED, 36);
 		
 		//	Wait for the user to press the start button.
 		newYork.waitForStart();
@@ -29,6 +30,7 @@ public class Main
 			sue.move();
 			sue.move();
 			sue.turnRight();
+			sue.setSize(60);
 		}
 		
 		karel.goToOrigin();
