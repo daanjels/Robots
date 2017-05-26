@@ -17,8 +17,6 @@ public class Main
 		for(int i=0; i<4; i = i+1)
 		{
 			karel.move();
-			karel.move();
-			karel.move();
 			karel.turnLeft();
 		}
 		
