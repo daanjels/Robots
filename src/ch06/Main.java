@@ -8,14 +8,16 @@ public class Main
 {
 	public static void main(String[] args)
 	{	SimpleCity newYork = new SimpleCity();
-		SimpleBot karel = new SimpleBot(newYork, 4, 2, Constants.EAST);
-		SimpleBot sue = new SimpleBot(newYork, 4, 2, Constants.NORTH);
+		SimpleBot karel = new SimpleBot(newYork, 4, 2, Constants.EAST, 400);
+		SimpleBot sue = new SimpleBot(newYork, 4, 2, Constants.NORTH, 400);
 		
 		//	Wait for the user to press the start button.
 		newYork.waitForStart();
 		
 		for(int i=0; i<4; i = i+1)
 		{
+			karel.speed(800);
+			karel.goSlower();
 			karel.move();
 			karel.move();
 			karel.turnLeft();
@@ -23,6 +25,7 @@ public class Main
 		
 		for(int i=0; i<4; i = i+1)
 		{
+			sue.goFaster();
 			sue.move();
 			sue.move();
 			sue.turnRight();

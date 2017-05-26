@@ -14,19 +14,21 @@ public class SimpleBot extends Paintable
 	private int street;
 	private int avenue;
 	private int direction;
+	private float speed;
 	
 	/** Construct a new Robot in a given city at the given location. 
 	 * @param aCity			The city in chich the robot appears.
 	 * @param aStreet		The robot's initial street.
-	 * @param anAvenue		The robot's initieal avenue.
+	 * @param anAvenue		The robot's initial avenue.
 	 * @param aDirection	The robot's initial direction. */
-	public SimpleBot(SimpleCity aCity, int aStreet, int anAvenue, int aDirection)
+	public SimpleBot(SimpleCity aCity, int aStreet, int anAvenue, int aDirection, float aSpeed)
 	{
 		super();
 		this.street = aStreet;
 		this.avenue = anAvenue;
 		this.direction = aDirection;
-		aCity.add(this, 2);	// add this robot to teh given city in the top level.
+		this.speed = aSpeed;
+		aCity.add(this, 2);	// add this robot to the given city in the top level.
 	}
 	
 	/** Paint the robot at its current location. */
@@ -59,7 +61,7 @@ public class SimpleBot extends Paintable
 	{
 		this.street= this.street + this.strOffset();
 		this.avenue = this.avenue + this.aveOffset();
-		Utilities.sleep(400);
+		Utilities.sleep((long) this.speed);
 	}
 	
 	/** Turn the robot 90 degrees to the left. */
@@ -70,7 +72,7 @@ public class SimpleBot extends Paintable
 		} else
 		{ this.direction = this.direction - 1;
 		}
-		Utilities.sleep(400);
+		Utilities.sleep((long) this.speed);
 	}
 	
 	/** Turn the robot 90 degrees to the right. */
@@ -81,7 +83,16 @@ public class SimpleBot extends Paintable
 		} else
 		{ this.direction = this.direction + 1;
 		}
-		Utilities.sleep(400);
+		Utilities.sleep((long) this.speed);
+	}
+	
+	public void goFaster()
+	{
+		this.speed = (float) (this.speed * 0.80);
+	}
+	public void goSlower()
+	{
+		this.speed = (float) (this.speed / 0.80);
 	}
 	
 	public void goToOrigin()
@@ -95,6 +106,11 @@ public class SimpleBot extends Paintable
 	{
 		this.street = aStreet;
 		this.avenue = anAvenue;
+	}
+	
+	public void speed(float aSpeed)
+	{
+		this.speed = aSpeed;
 	}
 	
 //	Getters
