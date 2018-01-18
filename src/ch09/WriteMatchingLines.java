@@ -14,7 +14,6 @@ public class WriteMatchingLines {
 		PrintWriter out = null;
 		try {
 			in = new Scanner(new File("the-file-name.txt"));
-//			out = new PrintWriter("/Users/Arq/Documents/becker.txt");
 			FileWriter fw = new FileWriter("becker.txt", true);
 			out = new PrintWriter(fw);
 		} catch (FileNotFoundException ex) {
